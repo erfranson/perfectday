@@ -17,28 +17,56 @@ body {
 }
 .navbar-default .navbar-brand{
 	color: #ffffff;
+	font-family: 'Anton', sans-serif;
 }
 .navbar-default .navbar-nav>li>a{
 	color:#ffffff;
 }
 #started{
-	height: 550px;
+	height: 250px;
 	background: url(../images/weather.png);
+	margin-top: 70px;
 	margin-bottom: 0;
 }
+h1 {
+	font-family: 'Anton', sans-serif;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+a.btn.btn-primary.btn-lg.active {
+	background-color: rgba(255, 213, 45, 0.8);
+	border-color: rgba(255, 213, 45, 0.8);	
+}
 #basic-info{
-	height: 500px;
+	height: 250px;
 	background: #fff;
 	margin-bottom: 0;
 }
+h2 {
+	font-family: 'Anton', sans-serif;
+	padding-top: 20px;
+}
+p {
+	font-family: 'Nunito', sans-serif;
+	font-size: 18px;
+	font-weight: bolder;
+}
 #how-to{
-	height: 500px;
+	height: 400px;
 	background: #fff;
 	background: url(../images/weather.png);
 	margin-bottom: 0;
 }
 #create-account{
 	background-color: #ffffff;
+	height: 250px;
+}
+li {
+	font-family: 'Nunito', sans-serif;
+	font-size: 18px;
+	font-weight: bolder;
+	padding: 10px;
 }
 .footer {
     position: absolute;
@@ -48,11 +76,11 @@ body {
     background-color:#46A819;
 }
 
-
-
-/*sign up page*/
-
-
+h3 {
+	font-family: 'Nunito', sans-serif;
+	font-size: 20px;
+	text-align: center;
+}
 
 /*sign in page*/
 .sign-in{
@@ -61,7 +89,7 @@ body {
 	margin-top: 130px;
 	padding: 2%;
 	border-radius: 4%;
-	box-shadow: 10px 10px 5px grey
+	box-shadow: 10px 10px 5px grey;
 }
 .form-group .col-sm-10{
 	padding-left: 27px;
