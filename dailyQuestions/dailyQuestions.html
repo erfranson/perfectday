@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Perfect Day | Sign Up</title>
+	<title>Perfect Day | Sign In</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<link rel="stylesheet" href="../assets/css/sign.css">
 </head>
 <body>
+<!-- nav -->
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -42,6 +43,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+
 <!-- content -->
 <div class="container-fluid">
 	<div class="row">
@@ -49,35 +51,24 @@
 			<div class="row">
 				<div class="col-xs-3"></div>
 				<div class="col-xs-6 sign-in">
-					<h3 class="text-center heading">Sign Up Today</h3>
-					<form class="form-horizontal">
-						<div class="form-group">
-						    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-						    <div class="col-sm-10">
-						    	<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-						    </div>
+					<h3 class="text-center heading" id="questionsHeader">Daily Questions</h3>
+					<div class="row">
+						<div class=col-xs-12>
+							<h4 class="text-center" id="dailyQuestion">Click "Start" to begin the questioning. Let's make your perfect day!</h4>
 						</div>
-						<div class="form-group">
-						    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-						    <div class="col-sm-10">
-						    	<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-						    </div>
+					</div>
+					<div class="row">
+						<div class=col-sm-12 id="dailyQuestionButton">
+							<button type="submit" class="btn btn-default" onclick="questionSetup()">Start!</button>
 						</div>
-						<div class="form-group">
-						    <label for="inputPassword3" class="col-sm-2 control-label">Confirm Password</label>
-						    <div class="col-sm-10">
-						    	<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-						    </div>
+					</div>
+					<div class="row">
+						<div class=col-sm-12>
+							<div id=dailyQuestionAnswers>
+							</div>
 						</div>
-						
-						<div class="form-group">
-						    <div class="col-sm-offset-2 col-sm-10">
-						    	<button type="submit" class="btn btn-default">Submit</button>
-						    </div>
-						</div>
-					</form>
+					</div>
 				</div>
-				<div class="col-xs-3"></div>
 			</div>	
 		</div>
 	</div>
@@ -101,5 +92,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="../assets/js/app.js" type="text/javascript">	
 </script>
+
 </body>
 </html>
