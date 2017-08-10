@@ -77,3 +77,7 @@ body {
 .heading{
 	padding-bottom: 15px;
 }
+#dailyQuestionButton>button{
+	margin: 0 auto;
+	display: block;
+}
