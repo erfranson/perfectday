@@ -6,6 +6,8 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
+/*main page*/
 .navbar{
 	background-color: rgba(255, 213, 45, 0.8);
 	color:#ffffff;
@@ -73,8 +75,40 @@ li {
     height: 61px;
     background-color:#46A819;
 }
+<<<<<<< HEAD
 h3 {
 	font-family: 'Nunito', sans-serif;
 	font-size: 20px;
 	text-align: center;
+=======
+
+
+
+/*sign up page*/
+.content{
+	background: url(../images/weather.png);
+	height: 520px;
+}
+
+
+
+
+/*sign in page*/
+.sign-in{
+	background-color: #ffffff;
+	border: solid 1px #cccccc;
+	margin-top: 130px;
+	padding: 2%;
+	border-radius: 4%;
+	box-shadow: 10px 10px 5px grey
+}
+.form-group .col-sm-10{
+	padding-left: 27px;
+}
+.col-sm-10 .form-control{
+	width: 60%;
+}
+.heading{
+	padding-bottom: 15px;
+>>>>>>> master
 }
