@@ -28,6 +28,9 @@ body {
 	margin-top: 70px;
 	margin-bottom: 0;
 }
+#mainBody{
+	text-align: center;
+}
 h1 {
 	font-family: 'Anton', sans-serif;
 	text-align: center;
@@ -38,6 +41,7 @@ a.btn.btn-primary.btn-lg.active {
 	background-color: rgba(255, 213, 45, 0.8);
 	border-color: rgba(255, 213, 45, 0.8);	
 }
+
 #basic-info{
 	height: 250px;
 	background: #fff;
@@ -108,5 +112,4 @@ h3 {
 #answerId:hover{
 	color:rgba(255, 213, 45, 0.8);
 	text-align: center;
-	border: solid black;
 }
