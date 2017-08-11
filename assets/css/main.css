@@ -100,7 +100,13 @@ h3 {
 .heading{
 	padding-bottom: 15px;
 }
+/*Question Page*/
 #dailyQuestionButton>button{
 	margin: 0 auto;
 	display: block;
+}
+#answerId:hover{
+	color:rgba(255, 213, 45, 0.8);
+	text-align: center;
+	border: solid black;
 }
