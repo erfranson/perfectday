@@ -1,3 +1,55 @@
+//THIS IS THE START OF SIGN UP
+
+// Initialize Firebase
+var config = {
+	apiKey: "AIzaSyAqKEVE2OkbS65BcE43GNUML6cbUkKIo7Q",
+    authDomain: "perfectday-28ddb.firebaseapp.com",
+    databaseURL: "https://perfectday-28ddb.firebaseio.com",
+    projectId: "perfectday-28ddb",
+    storageBucket: "gs://perfectday-28ddb.appspot.com",
+    messagingSenderId: "711082949083"
+  };
+  firebase.initializeApp(config);
+
+var database = firebase.database();
+var data = [];
+var loginState = false;
+
+database.ref('/login').on("value", function(snap) {
+  data = snap.val().users;
+  data = JSON.parse(data);
+  console.log(data);
+});
+
+// Button for adding new users
+$('#signUp').on("click", function (event) {
+  event.preventDefault();
+
+//if statement for passing matching passwords to database or providing an alert that they do not match
+  if (document.getElementById('inputPassword3').value === document.getElementById('inputPassword4').value) {
+    //alert that new user was added
+  var newUser = {
+    email: $('#inputEmail3').val(),
+    password: $('#inputPassword3').val()
+  };
+    alert("New User Added");
+  data.push(newUser);
+  data = JSON.stringify(data);
+  database.ref('/login').set({
+    users: data
+  });
+    //clear inputs
+    $("#inputEmail3").val("");
+    $("#inputPassword3").val("");
+    $("#inputPassword4").val("");
+    window.location.href = "../dailyQuestions/dailyQuestions.html";
+  } else {
+    alert("Passwords do not match!");
+  }
+});
+
+//END OF SIGNUP
+
 
 //---------------------------Music algorithm material -------------------------------------
 //_________________________________________________________________________________________
@@ -25,7 +77,7 @@ var userQuestions = [
 	,{	verbiage: "What type of music are you feeling like?"
 	,	answers: ["Rock", "Country", "Rap", "Hip Hop", "Pop", "Alternative/Punk"]
 	,}
-	//quesstion 3
+	//question 3
 	
 ];
 
