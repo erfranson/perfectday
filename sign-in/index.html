@@ -6,6 +6,10 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<link rel="stylesheet" href="../assets/css/sign.css">
+
+	<!-- firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+
 </head>
 <body>
 <!-- nav -->
@@ -27,8 +31,8 @@
       <ul class="nav navbar-nav">
       </ul>
       <ul class="nav navbar-nav navbar-right">
-      	<li><a href="">Sign Up</a></li>
-        <li><a href="#">Sign In</a></li>
+      	<li><a href="../sign-up/index.html">Sign Up</a></li>
+        <li><a href="sign-in/index.html">Sign In</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User<span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -76,7 +80,7 @@
 						</div>
 						<div class="form-group">
 						    <div class="col-sm-offset-2 col-sm-10">
-						    	<button type="submit" class="btn btn-default">Sign in</button>
+						    	<button type="submit" class="btn btn-default" id="signIn">Sign in</button>
 						    </div>
 						</div>
 					</form>
