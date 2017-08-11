@@ -49,6 +49,7 @@ function nextQuestion(){
 			//set up and append the new answers
 			var newP = $("<p>").text(userQuestions[questionNum].answers[i]);
 			newP.attr("class", "text-center");
+			newP.attr("id", "answerId");
 			newP.attr("onclick", "answerSelect(this.innerHTML)");	
 			$("#dailyQuestionAnswers").append(newP);	
 		}
@@ -211,6 +212,8 @@ console.log("Track: " + songTrack);
     	//console.log("trackChecker: " + trackChecker);
     	console.log(playlist);
     });
+
+
 }
 //------------------------end music algorithm material---------------------------
 //_________________________________________________________________________________
