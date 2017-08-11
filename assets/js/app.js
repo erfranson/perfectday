@@ -28,12 +28,12 @@ $('#signUp').on("click", function (event) {
 //if statement for passing matching passwords to database or providing an alert that they do not match
   if (document.getElementById('inputPassword3').value === document.getElementById('inputPassword4').value) {
     //alert that new user was added
-  var newUser = {
+  var loginInfo = {
     email: $('#inputEmail3').val(),
     password: $('#inputPassword3').val()
   };
     alert("New User Added");
-  data.push(newUser);
+  data.push(loginInfo);
   data = JSON.stringify(data);
   database.ref('/login').set({
     users: data
@@ -50,6 +50,34 @@ $('#signUp').on("click", function (event) {
 
 //END OF SIGNUP
 
+
+//BEGIN SIGN-IN SECTION
+
+$('#signIn').on('click', function(event) {
+	loginState = false;
+	var loginInfo = {
+		email: $('#inputEmail3').val(),
+		password: $('#inputPassword3').val()
+	}
+	console.log(data);
+	console.log(loginInfo.email);
+	console.log(loginInfo.password);
+	for (var i = 0; i < data.length; i++) {
+		if(loginInfo.email === data[i].email && loginInfo.password === data[i].password){
+			loginState = true;
+		}
+	}
+	if(loginState){
+		console.log(window.location.href);
+		alert("You are logged in");
+//Should Direct to Daily Questions - not working
+		window.location.href = "../dailyQuestions/dailyQuestions.html";
+	} else {
+		alert("No matching credentials on record.  Please Register.");
+	}
+});
+
+//END SIGN-IN SECTION
 
 //---------------------------Music algorithm material -------------------------------------
 //_________________________________________________________________________________________
