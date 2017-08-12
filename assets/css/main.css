@@ -9,82 +9,157 @@ body {
 
 /*main page*/
 .navbar{
-	background-color: rgba(255, 213, 45, 0.8);
+	background-color: rgba(255, 255, 255, 0.8);
 	color:#ffffff;
 }
 .navbar .container-fluid{
 	padding: 10px 10px 10px 10px;
 }
 .navbar-default .navbar-brand{
-	color: #ffffff;
-	font-family: 'Anton', sans-serif;
+	font-family: 'Nunito', sans-serif;
+	color: #000000;
 }
 .navbar-default .navbar-nav>li>a{
-	color:#ffffff;
+	font-family: 'Nunito', sans-serif;
+	color:#000000;
 }
 #started{
-	height: 250px;
-	background: url(../images/weather.png);
-	margin-top: 70px;
+	height: 550px;
+	background: url(../images/cloudy-day.png);
 	margin-bottom: 0;
 }
-#mainBody{
-	text-align: center;
+.your-day{
+	margin-top: 200px;
 }
-h1 {
-	font-family: 'Anton', sans-serif;
-	text-align: center;
-	padding-top: 50px;
-	padding-bottom: 10px;
+.your-day h1{
+	font-family: 'Nunito', sans-serif;
+	font-size: 40px;
 }
-a.btn.btn-primary.btn-lg.active {
-	background-color: rgba(255, 213, 45, 0.8);
-	border-color: rgba(255, 213, 45, 0.8);	
+
+.sign-up-btn {
+	margin-top: 20px;
+	margin-right: 15px;
+	font-family: 'Nunito', sans-serif;
+	color: #ffffff;
+
+}
+.sign-in-btn{
+	margin-top: 20px;
+	margin-right: 15px;
+	font-family: 'Nunito', sans-serif;
+	background-color: #ffffff;
+	border-color: #ffffff;
+	color: #000000;
 }
 
 #basic-info{
-	height: 250px;
+	height: 300px;
+	font-family: 'Nunito', sans-serif;
 	background: #fff;
 	margin-bottom: 0;
 }
-h2 {
-	font-family: 'Anton', sans-serif;
-	padding-top: 20px;
+.info{
+	padding: 25px;
 }
-p {
-	font-family: 'Nunito', sans-serif;
-	font-size: 18px;
-	font-weight: bolder;
+.info p{
+	font-size: 20px;
+}
+.info-img{
+	
+	padding:0;
+}
+.info-img img{
+	width: 100%;
 }
 #how-to{
-	height: 400px;
+	height: 300px;
 	background: #fff;
-	background: url(../images/weather.png);
+	font-family: 'Nunito', sans-serif;
+	background: url(../images/cloudy-day.png);
 	margin-bottom: 0;
 }
-#create-account{
-	background-color: #ffffff;
-	height: 250px;
+.easy-usage{
+	padding-top: 25px;
 }
-li {
+.fa-search{
+	font-size: 200px;
+	color: #ffffff;
+	padding-top: 25px;
+	padding-left: 30px;
+}
+.fa-calendar-check-o{
+	font-size: 200px;
+	color: #ffffff;
+	padding-top: 25px;
+	padding-left: 30px;
+}
+#create-account{
+	height: 350px;
 	font-family: 'Nunito', sans-serif;
-	font-size: 18px;
-	font-weight: bolder;
-	padding: 10px;
+	background-color: #ffffff;
+}
+form.form-horizontal.sign-in{
+	margin-top: 20px;
+	text-decoration: none;
+}
+form.form-horizontal.sign-in ul{
+	padding-left:0;
+}
+form.form-horizontal.sign-in ul li{
+	list-style: none;
+	padding-top: 10px;
+	font-size: 20px;
+}
+form.form-horizontal.sign-in a{
+	margin-top: 20px;
 }
 .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 61px;
-    background-color:#46A819;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top: #e7e7e7 1px solid;
+}
+.foot-link{
+	margin-top: 15px;
+}
+.foot-link li{
+	list-style: none;
+}
+.foot-link li a{
+	color: #000000;
+	font-size: 15px;
+
+}
+.social{
+	margin-top: 15px;
+}
+.fa-instagram{
+	font-size: 30px;
+	margin-right: 5px; 
+
+}
+.fa-facebook{
+	font-size: 30px;
+	margin-right: 5px; 
+
+}
+.fa-twitter{
+	font-size: 30px;
 }
 
-h3 {
-	font-family: 'Nunito', sans-serif;
-	font-size: 20px;
-	text-align: center;
+.copy{
+	margin-top: 30px;
 }
+
+/*sign up page*/
+.content{
+	height: 520px;
+}
+
+
+
 
 /*sign in page*/
 .sign-in{
@@ -92,8 +167,8 @@ h3 {
 	border: solid 1px #cccccc;
 	margin-top: 130px;
 	padding: 2%;
-	border-radius: 4%;
-	box-shadow: 10px 10px 5px grey;
+	border-radius: 1%;
+	box-shadow: 5px 5px 5px grey
 }
 .form-group .col-sm-10{
 	padding-left: 27px;
@@ -103,13 +178,4 @@ h3 {
 }
 .heading{
 	padding-bottom: 15px;
-}
-/*Question Page*/
-#dailyQuestionButton>button{
-	margin: 0 auto;
-	display: block;
-}
-#answerId:hover{
-	color:rgba(255, 213, 45, 0.8);
-	text-align: center;
 }

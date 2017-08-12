@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Perfect Day</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="assets/css/main.css">
-
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/main.css">
+
+	
 
 </head>
 <body>
@@ -49,48 +52,60 @@
 <div class="container-fluid">
 	<div class="row" id="mainBody">
 		<div class="col-xs-12" id="started">
-		<h1>Design Your Day</h1>
-		<div class="col-md-12 text-center">
-		<a href="sign-up/index.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Sign Up</a>
+		<div class="col-md-12 text-center your-day">
+			<h1>Design Your Day</h1>
+			<a href="sign-up/index.html" class="btn btn-primary btn-lg sign-up-btn">Sign Up</a>
+			<a href="sign-in/index.html" class="btn btn-info btn-lg sign-in-btn">Sign In</a>
 		</div>
 			
 		</div>
 		<div class="col-xs-12" id="basic-info">
 			<div class="row">
-				<div class="col-xs-12">
-				<h2>What's on Perfect Day?</h2>
-				<br>
-				<p>Music: Pick your music based on mood, genre, similar songs, etc.</p>
-				<br>
-				<p>Food: Search for food based on location, popular cuisines, and popular restaurants.
+				<div class="col-xs-6 info">
+				<h2>What's a Perfect Day?</h2>
+				<p><strong>Music</strong>: Pick your music based on mood, genre, similar songs, etc.</p>
+				<p><strong>Food</strong>: Search for food based on location, popular cuisines, and popular restaurants.
 					
 				</div>
-				<div class="col-xs-6">
+				<div class="col-xs-6 info-img">
+					<img src="assets/images/failure-or-success.jpg" alt="spaceman">
+		
 					
 				</div>
 			</div>
 		</div>
 		<div class="col-xs-12" id="how-to">
 			<div class="row">
-				<div class="col-xs-12">
-					<h2>It's Easy to Use!</h2>
-					<br>
-					<p>Search: Know what you want? Just search and hit "play" or "get directions" and you're on your way.</p>
-					<br>
-					<p>Browse: Want some suggestions to peruse? Tell us what mood you're in and we'll give you some songs to choose.  Or tell us you want some Sushi and we'll let you know what's close.</p>
-					<br>
-					<p>Out on the town: Heading to a concert, a game, on date-night, and want us to put things together?  Tell us what mood you're in or give us a genre, then tell us where/what type of food you want and we'll give you some suggestions.</p>
-				</div>
 				<div class="col-xs-6">
+					<i class="fa fa-search" aria-hidden="true"></i>
+					<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+				</div>
+				<div class="col-xs-6 easy-usage">
+				<h2>It's Easy to Use!</h2>
+					<p><strong>Search</strong>: Know what you want? Just search and hit "play" or "get directions" and you're on your way.</p>
+					<p><strong>Browse</strong>: Want some suggestions to peruse? Tell us what mood you're in and we'll give you some songs to choose.  Or tell us you want some Sushi and we'll let you know what's close.</p>
+					<p>Out on the town: Heading to a concert, a game, on date-night, and want us to put things together?  Tell us what mood you're in or give us a genre, then tell us where/what type of food you want and we'll give you some suggestions.</p>
 					
 				</div>
 			</div>
 		</div>
 		<div class="col-xs-12" id="create-account">
-			<h2>What you get:</h2>
-			<li>Music</li>
-			<li>Food recommendations</li>
-			<a href="sign-up/index.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Sign Up</a>
+			<div class="row">
+				<div class="col-xs-4"></div>
+				<div class="col-xs-4">
+					<form class="form-horizontal sign-in text-center">
+						<h2><u>What you get</u></h2>
+						<ul>
+							<li>Music</li>
+							<li>Food recommendations</li>
+							<li>restaurants ratings</li>
+							<li>Youtube Videos</li>
+						</ul>
+						<a href="sign-up/index.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Sign Up</a>
+					</form>
+				</div>
+				<div class="col-xs-4"></div>
+			</div>
 		</div>
 	</div>
 
@@ -98,7 +113,24 @@
 <footer class="footer">
 	<div class="container">
 		<div class="row">
-		<h3>Ethan Franson, Cody Pilot, Christopher Daly, JT Barrick
+			<div class="col-xs-3 col-xs-offset-6">
+				<ul class="foot-link">
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">News</a></li>
+					<li><a href="#">Legal</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-3 social">
+				<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 text-center copy">
+				<p>Perfect Day Copyright 2017&copy;</p>
+			</div>
 		</div>
 	</div>
 </footer>
