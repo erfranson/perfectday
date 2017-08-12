@@ -1,3 +1,18 @@
 body{
 	background: url(../images/cloudy-day.png);
+	margin-bottom: 60px;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top: #e7e7e7 1px solid;
+}
+.content{
+	margin-bottom: 100px;
 }

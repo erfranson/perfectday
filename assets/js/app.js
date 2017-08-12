@@ -79,7 +79,7 @@ $('#signIn').on('click', function(event) {
 
 //END SIGN-IN SECTION
 
-//---------------------------Music algorithm material -------------------------------------
+//---------------------------Music algorithm material/yelp -------------------------------------
 //_________________________________________________________________________________________
 
 //initialize and declare variables
@@ -94,18 +94,29 @@ var playlist = [];
 var newTrack = {};
 var playlistLength = 15;
 var userFeelings = [];
+var results =[];
+
 
 //set up the questions gauging how the user is feeling
 var userQuestions = [
 	//question 1
 	{	verbiage: "How is your day going so far?"
 	,	answers: ["Freaking Awesome!", "No complaints here.", "I want to break something.", "I feel like my heart has been round housed.", "Ready to get frisky!"]
-	,}
+	},
 	//question 2
-	,{	verbiage: "What type of music are you feeling like?"
+	{	verbiage: "What type of music are you feeling like?"
 	,	answers: ["Rock", "Country", "Rap", "Hip Hop", "Pop", "Alternative/Punk"]
-	,}
+	},
 	//question 3
+	{	verbiage: "What kind of food are you feeling?",
+		answers: ["Seafood","Chinese Food","Indian Food", "Burgers","Italian Food","Mexican Food"]
+
+	},
+	//question 4
+	{	verbiage: "What is your zipcode?",
+		answers: ["84604","84005","84070", "84101"]
+
+	}
 	
 ];
 
@@ -293,7 +304,81 @@ console.log("Track: " + songTrack);
     	console.log(playlist);
     });
 
+    // -------------------------------- Yelp API --------------------------
+
+    if(userFeelings[2] === "seafood"){
+    	food = "seafood";
+    } else if (userFeelings[2] === "Chinese Food"){
+    	food = "Chinese Food";
+    } else if (userFeelings[2] === "Indian Food"){
+    	food = "Indian Food";
+    } else if (userFeelings[2] === "Burgers"){
+    	food = "Burgers";
+    } else if (userFeelings[2] === "Italian Food"){
+    	food = "Italian Food";
+    } else if (userFeelings[2] === "Mexican Food"){
+    	food = "Mexican Food";
+    	console.log(food);
+    }
+
+    if (userFeelings[3] === "84604") {
+    	zip = "84604";
+    }else if(userFeelings[3] === "84005"){
+    	zip = "84005";
+    } else if (userFeelings[3] === "84070"){
+    	zip = "84070";
+    } else if (userFeelings[3] === "84101"){
+    	zip = "84101";
+    	console.log(zip);
+    }
+
+    var proxy = 'https://cors-anywhere.herokuapp.com/';
+	var myUrl = "https://api.yelp.com/v3/businesses/search?term=";
+	var food;
+	var zip;
+	var form = new FormData();
+	form.append("client_id", "B5y22-YgcS57iJEqUnouPg");
+	form.append("client_secret", "w1MKhf7gXzwzpHis01GEIgLkfccGciJnErxSa2yARbvye5YaHOxZlfu6jqAQyeBM");
+
+
+	  var settings = {
+	  "async": true,
+	  "crossDomain": true,
+	  "url": proxy + myUrl + food + "&location=" + zip,
+	  "method": "GET",
+	  "headers": {
+	    "authorization": "Bearer VeDy2ZobD3D1nYpLl4_Dbe-vP__DRHnbj4z1qPlgqKkDRb_Wcf9W4yBl2HfYSHsvRjHOJcS-Hq0IB2WRvROQvVYFWisuR-t18nL_0R5Nj_27swJGG0M8kGxMjECNWXYx",
+	  
+	  },
+	  "processData": false,
+	  "contentType": false,
+	  "mimeType": "multipart/form-data",
+	  "data": form,
+
+	}
+
+
+
+	    $.ajax(settings).done(function (response) {
+	      var data = JSON.parse(response);
+	      for (var i = 0; i < data.businesses.length; i++) {
+	        var restaurants = {
+	        	name: data.businesses[i].name,
+	        	phone: data.businesses[i].display_phone,
+	        	address:data.businesses[i].location.address1,
+	        	price: data.businesses[i].price,
+	        	review: data.businesses[i].rating,
+	        	image: data.businesses[i].image_url
+	        }
+	        results.push(restaurants);
+	      }
+	      console.log(results);
+	      
+	  });
+
+
 
 }
 //------------------------end music algorithm material---------------------------
-//_________________________________________________________________________________
+//___________
+______________________________________________________________________
