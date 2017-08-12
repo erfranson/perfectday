@@ -263,7 +263,7 @@ function generateDay(){
 console.log("Artist: " + songArtist);
 console.log("Track: " + songTrack);
 //set up our api
-	var queryURL = "http://ws.audioscrobbler.com/2.0/?method=track.getsimilar&artist=" + songArtist + "&track=" + songTrack + "&api_key=" + Lastkey + "&format=json";
+	var queryURL = "https://ws.audioscrobbler.com/2.0/?method=track.getsimilar&artist=" + songArtist + "&track=" + songTrack + "&api_key=" + Lastkey + "&format=json";
    
   	$.ajax({
       url: queryURL,
